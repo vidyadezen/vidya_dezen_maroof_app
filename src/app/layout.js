@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/Header";
+import SeachByVehicle from "./components/SeachByVehicle";
+import CurateCustomeService from "./components/CurateCustomeService";
+import EnhanceSection from "./components/EnhanceSection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,6 +25,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Header/>
+        <SeachByVehicle />
+        <CurateCustomeService />
+        <EnhanceSection />
         {children}
       </body>
     </html>
